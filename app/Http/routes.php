@@ -6,7 +6,7 @@
 |--------------------------------------------------------------------------
 |
 | Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
+00| It's a breeze. Simply tell Laravel the URIs it should respond to
 | and give it the controller to call when that URI is requested.
 |
 */
@@ -14,6 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
+
 // Route::get('/', function () {
 //    return view('home');
 // });
@@ -24,15 +29,15 @@ Route::get('/', function () {
 // // route to process the form
 // Route::post('login', array('uses' => 'HomeController@doLogin'));
 
-// Route::post('/user/login',array('uses'=>'LogInController@checkLogin'));
+Route::post('/user/login',array('uses'=>'LogInController@checkLogin'));
 
 // Route::get('/student', function () {
 //    return view('stud-home');
 // });
 
-// Route::get('/admin', function () {
-//    return view('admin-home');
-// });
+Route::get('/admin', function () {
+   return view('admin-home');
+});
 
 // Route::get('/collegeinstructor', function () {
 //    return view('col-instructor-home');
@@ -101,11 +106,3 @@ Route::get('/', function () {
 // });
 // Route::post('/user/register',array('uses'=>'UserRegistration@postRegister'));
 // Route::get('view-records','StudViewController@index');
-
-// Route::auth();
-
-// Route::get('/home', 'HomeController@index');
-
-Route::auth();
-
-Route::get('/home', 'HomeController@index');

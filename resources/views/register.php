@@ -1,37 +1,290 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-   <head>
-      <title>Form Example</title>
-   </head>
+  <meta charset= "utf-8">
+    <title>Student Registration</title>
 
-   <body>
-      <form action = "/user/register" method = "post">
-         <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>">
+    <link rel ="stylesheet" type ="text/css" href ="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+<header id="header">
+
+  <div class="header-main">
+    <div class="header-main-content">
+      <div class="container-fluid">
+        <div class="container row">
+          <div class="col-sm-2">
+            <div id="logo"><img src="../stud-regis/images/logo60nambk.png" width="165" height="77" alt="Klass">
+            </div>
+            
+            
+          </div>
+
+          <div class="breadcrum col-sm-8">
+              <p>hanoi university of science and technology</p>
+              <h1>school of international education</h1>  
+          </div>
+                     
+              
+            <div class="clearfix"></div>
+        </div>
+             
+      </div>
+    </div>
+  </div>
+
+    <div class="header-main-menubar">
+  
+
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+  
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> HOME<span class="sr-only">(current)</span></a></li>
+        
+        <li class="dropdown" id="formcv">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Form <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">CV</a></li>
+            <li><a href="#">Registration</a></li>
+          </ul>
+        </li>
+
+        <script>
+          $('#formcv a').click.dropdown();
+        </script>
+
+        <li class="intern dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Intern <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Topic</a></li>
+            <li><a href="#">Report</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">Status</a></li>
+            <li><a href="#">Mark</a></li>
+          </ul>
+        </li>
+
+        
+      </ul>
       
-         <table>
-            <tr>
-               <td>Name</td>
-               <td><input type = "text" name = "name" /></td>
-            </tr>
-         
-            <tr>
-               <td>Username</td>
-               <td><input type = "text" name = "username" /></td>
-            </tr>
-         
-            <tr>
-               <td>Password</td>
-               <td><input type = "text" name = "password" /></td>
-            </tr>
-         
-            <tr>
-               <td colspan = "2" align = "center">
-                  <input type = "submit" value = "Register" />
-               </td>
-            </tr>
-         </table>
       
-      </form>
-   
-   </body>
-</html>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+  
+    </div>
+
+  </div>
+  
+</header>
+<!--E.O.Header--><!--Custom theme header-->
+
+<!--E.O.Slider-->    
+    
+    
+    
+</div>
+<!--Custom theme slider-->
+<div class="form-register">
+  <div class="container-fluid">
+      
+        <h2>internship registration for student </h2>
+
+          <div class="fillin">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label for="name" class="col-sm-2 control-label">Fullname</label>
+                <div class="col-sm-4">
+                  <input class="form-control" id="name" placeholder="Fullname">
+                </div>
+
+                <label for="class" class="col-sm-2 control-label">Class</label>
+                <div class="col-sm-2">
+                  <input class="form-control" id="class" placeholder="Class">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="col-sm-offset-1 col-sm-5">
+                  <div class="radio radio-danger">
+                    <label style="font-weight: bold"> Gender  </label>
+                    <label style="margin-left: 40px">
+                      <input type="radio" name="survey"> Male
+                    </label>
+                    <label style="margin-left: 40px">
+                      <input type="radio" name="survey"> Female
+                    </label>
+                  </div>
+                </div>
+                
+                <div class="col-sm-6">
+                  <div class="radio radio-danger">
+                    <label style="font-weight: bold"> Laptop   </label>
+                    <label style="margin-left: 40px">
+                      <input type="radio" name="check"> Yes
+                    </label>
+                     <label style="margin-left: 40px">
+                      <input type="radio" name="check"> No
+                    </label>
+
+                  </div>
+                </div>
+              </div>
+
+  
+              <div class="form-group">
+                <label for="idnumber" class="col-sm-2 control-label">Student's number</label>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="idnumber" placeholder="Student's number">
+                </div>
+              </div>
+
+              
+              <div class="form-group">
+                <label for="address" class="col-sm-2 control-label">Address</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="address" placeholder="Address">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="phonenumber" class="col-sm-2 control-label">Phone</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="phonenumber" placeholder="phonenumber">
+                </div>
+
+                <label for="email" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-3">
+                  <input type="email" class="form-control" id="email" placeholder="Email">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="language" class="col-sm-2 control-label">Foreign Language</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="type" placeholder="Certification">
+                </div>
+
+                <div class="col-sm-2">
+                  <input type="text" class="form-control" id="mark" placeholder="Point">
+                </div>
+                 </div>
+
+                 <div class="form-group">
+                  <label for="skills" class="col-sm-2 control-label">What skills do I have?</label>
+                  <div class="col-sm-7">
+                  <textarea class="form-control" col="7" rows="7" ></textarea>
+                  </div>
+                 </div>
+
+                 <div class="form-group">
+                  <label for="learning" class="col-sm-2 control-label">What skills do I want to learn?</label>
+                  <div class="col-sm-7">
+                  <textarea class="form-control" col="7" rows="7" ></textarea>
+                  </div>
+                 </div>
+
+                 <div class="form-group">
+                <label for="topic" class="col-sm-2 control-label">Topic</label>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="topic1" placeholder="Topic 1">
+                </div>
+                
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="topic2" placeholder="Topic 2">
+                </div>
+
+                
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="topic3" placeholder="Topic 3">
+                </div>
+              </div>
+
+                 <p class="note">* Complete the following information if the student has an intern's company:</p>
+                  
+                <div class="form-group">
+                <label for="companyname" class="col-sm-2 control-label">Company's name</label>
+                <div class="col-sm-5">
+                  <input type="text" class="form-control" id="companyname" placeholder="Company name"> 
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="company-address" class="col-sm-2 control-label">Company's address</label>
+                <div class="col-sm-5">
+                  <input type="text" class="form-control" id="company-address" placeholder="Company address ">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="instructor" class="col-sm-2 control-label">Company's Instructor</label>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="instructor" placeholder="Name ">
+                </div>
+                <label for="ins-phonenumber" class="col-sm-1 control-label">Phone</label>
+                <div class="col-sm-2">
+                  <input type="text" class="form-control" id="ins-phonenumber" placeholder="Phone">
+                </div>
+
+                <label for="ins-email" class="col-sm-1 control-label">Email</label>
+                <div class="col-sm-2">
+                  <input type="email" class="form-control" id="ins-email" placeholder="Email ">
+                </div>
+              </div>
+
+             
+
+                <div class="form-group">
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                  </div>
+                </div>
+              </form>
+
+     
+      </div> 
+      <!-- end-of-fillin -->
+
+      
+    </div>
+</div>
+<!-- end-of-form-register -->
+
+<footer id="footer">    
+  <div class="footer-main">
+    <div class="container-fluid">
+      <div class="row-fluid">
+
+          <div class="infoarea">
+            <div class="footer-logo">
+              <a href="hust">
+                <img src="../stud-regis/images/logo.png" width="89" height="56" alt="footer-logo">
+              </a>
+            </div>
+        
+            <div class="info">
+              <p> Add: Room 201, D7 Building, HUST | No.1, Dai Co Viet Street, Hanoi, Vietnam.</p>
+              <p> Email: sievn@hust.edu.vn</p>
+              <p> Copyright© <b>School of International Education | HUST</b></p>
+            </div>
+
+
+        
+      </div>
+    </div>
+  </div>
+</footer>
+<!--E.O.Footer-->
+
+</body>
